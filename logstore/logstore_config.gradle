@@ -1,0 +1,4 @@
+ext {
+    logstore_authorities = "com.kingskys.logstore." + project.rootProject.name + System.currentTimeMillis() + Math.round(Math.random() * 10) + Math.round(Math.random() * 10)
+
+}
