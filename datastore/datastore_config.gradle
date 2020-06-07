@@ -1,0 +1,4 @@
+ext {
+    datastore_authorities = "com.kingskys.datastore." + project.rootProject.name + System.currentTimeMillis() + Math.round(Math.random() * 10) + Math.round(Math.random() * 10)
+
+}

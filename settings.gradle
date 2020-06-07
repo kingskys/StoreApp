@@ -1,3 +1,4 @@
 rootProject.name='StoreApp'
 include ':app'
 include ':logstore'
+include ':datastore'

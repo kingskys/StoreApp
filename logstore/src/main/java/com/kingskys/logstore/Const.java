@@ -1,5 +1,11 @@
 package com.kingskys.logstore;
 
-public class Const {
-    public static String logstoreAuthorities = BuildConfig.logstore_authorities;
+class Const {
+    static final String authorities = BuildConfig.logstore_authorities;
+
+    static final String logTableName = "logs";
+    static final int logTableCode = 1;
+
+    static final String dbName = "logstore.db";
+
 }
