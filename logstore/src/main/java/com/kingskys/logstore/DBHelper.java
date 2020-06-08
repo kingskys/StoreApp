@@ -20,7 +20,7 @@ class DBHelper extends SQLiteOpenHelper {
     }
 
     private void createTable(SQLiteDatabase db) {
-        db.execSQL("create table if not exists " + Const.logTableName + "(uid INTEGER(64) primary key autoincrement, time int(64), txt text)");
+        db.execSQL("create table if not exists " + Const.logTableName + "(uid INTEGER primary key autoincrement, time int(64), txt text)");
     }
 
     @Override
