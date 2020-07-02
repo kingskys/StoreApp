@@ -5,7 +5,7 @@ Android ContentProvider 数据库存储
 
 数据库格式
 --------
-create table if not exists logs(uid INTEGER(64) primary key autoincrement, time int(64), txt text)
+create table if not exists logs(uid INTEGER primary key autoincrement, time int(64), txt text)
 
 简单示例
 --------
