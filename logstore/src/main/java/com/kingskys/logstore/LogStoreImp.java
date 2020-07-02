@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 class LogStoreImp {
-    private static final Uri mUri = Uri.parse("content://" + Const.authorities + "/" + Const.logTableName);
+    static final Uri mUri = Uri.parse("content://" + Const.authorities + "/" + Const.logTableName);
 
     static void insert(Context context, long time, String value) {
         ContentValues values = new ContentValues();
@@ -133,5 +133,12 @@ class LogStoreImp {
         ContentResolver resolver = context.getContentResolver();
         String where = "uid >= ? and uid <= ?";
         resolver.delete(mUri, where, new String[]{String.valueOf(startId), String.valueOf(endId)});
+    }
+
+    static void deleteByTime(Context context, long startTime, long endTime) {
+        ContentResolver resolver = context.getContentResolver();
+        String where = "time >= ? and time <= ?";
+        String[] args = new String[]{String.valueOf(startTime), String.valueOf(endTime)};
+        resolver.delete(mUri, where, args);
     }
 }

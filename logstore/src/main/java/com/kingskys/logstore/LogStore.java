@@ -8,6 +8,9 @@ import java.util.concurrent.ExecutionException;
 
 public class LogStore {
 
+    public static Uri getUri() {
+        return LogStoreImp.mUri;
+    }
 
     /**
      * 增加一条内容
@@ -60,6 +63,13 @@ public class LogStore {
             return;
         }
         LogStoreImp.delete(context, startId, endId);
+    }
+
+    public static void deleteByTime(Context context, long startTime, long endTime) {
+        if (startTime > endTime) {
+            return;
+        }
+        LogStoreImp.deleteByTime(context, startTime, endTime);
     }
 
     /**

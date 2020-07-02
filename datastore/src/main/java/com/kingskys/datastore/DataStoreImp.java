@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 class DataStoreImp {
-    private static final Uri mUri = Uri.parse("content://" + Const.authorities + "/" + Const.tableName);
+    static final Uri mUri = Uri.parse("content://" + Const.authorities + "/" + Const.tableName);
 
     static void update(Context context, String uid, String value) {
         String where = "uid = ?";

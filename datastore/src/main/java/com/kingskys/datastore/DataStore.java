@@ -11,6 +11,9 @@ import androidx.annotation.Nullable;
 
 public class DataStore {
 
+    public static Uri getUri() {
+        return DataStoreImp.mUri;
+    }
 
     /**
      * 设置数据
